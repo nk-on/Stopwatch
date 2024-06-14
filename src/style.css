@@ -3,14 +3,21 @@
   padding: 0;
   box-sizing: border-box;
 }
-body{
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.container{
-    font-size: 30px;
-    display: flex;
-    justify-content: space-between;
+.container {
+  font-size: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.numbers-container{
+  display: flex;
+}
+.buttons{
+  display: flex;
 }
