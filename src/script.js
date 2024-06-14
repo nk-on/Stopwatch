@@ -15,8 +15,22 @@ function startStopWatch() {
       minutes++;
       seconds = 0;
     }
-    seconds <= 10 ?  secondsElement.textContent = `:0${seconds}` :  secondsElement.textContent = `:${seconds}`;
-    minutesElement.textContent = minutes;
+    if (minutes >= 60) {
+      hours++;
+      minutes = 0;
+    }
+    if (minutes >= 24) {
+      hours = 0;
+    }
+    seconds <= 10
+      ? (secondsElement.textContent = `:0${seconds}`)
+      : (secondsElement.textContent = `:${seconds}`);
+    minutes <= 10
+      ? (minutesElement.textContent = `:0${minutes}`)
+      : (minutesElement.textContent = `${minutes}`);
+    hours <= 10
+      ? (hoursElement.textContent = `:0${hours}`)
+      : (hoursElement.textContent = `${hours}`);
   }, 1000);
 }
 startButton.addEventListener('click', startStopWatch);
