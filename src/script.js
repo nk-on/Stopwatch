@@ -33,6 +33,6 @@ function countTime() {
     : (hoursElement.textContent = `${hours}`);
 }
 function startStopWatch() {
-  setInterval(manageTime, 1000);
+  setInterval(countTime, 1000);
 }
 startButton.addEventListener('click', startStopWatch);
