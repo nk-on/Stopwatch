@@ -22,13 +22,13 @@ function startStopWatch() {
     if (minutes >= 24) {
       hours = 0;
     }
-    seconds <= 10
+    seconds < 10
       ? (secondsElement.textContent = `:0${seconds}`)
       : (secondsElement.textContent = `:${seconds}`);
-    minutes <= 10
+    minutes < 10
       ? (minutesElement.textContent = `:0${minutes}`)
       : (minutesElement.textContent = `${minutes}`);
-    hours <= 10
+    hours < 10
       ? (hoursElement.textContent = `:0${hours}`)
       : (hoursElement.textContent = `${hours}`);
   }, 1000);
