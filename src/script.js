@@ -29,7 +29,7 @@ function startStopWatch() {
       ? (minutesElement.textContent = `:0${minutes}`)
       : (minutesElement.textContent = `${minutes}`);
     hours < 10
-      ? (hoursElement.textContent = `:0${hours}`)
+      ? (hoursElement.textContent = `0${hours}`)
       : (hoursElement.textContent = `${hours}`);
   }, 1000);
 }
