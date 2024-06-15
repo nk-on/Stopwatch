@@ -3,11 +3,6 @@ const minutesElement = document.querySelector('[data-minutes]');
 const secondsElement = document.querySelector('[data-seconds]');
 const startButton = document.querySelector('[data-start]');
 const stopButton = document.querySelector('[data-stop]');
-///stopwatch should display time elapsed after clicking start buttton
-//run set timeout function
-//increase count variable by 1
-//if it will reach to 60 (1 minute) add 1 to minute container
-//it should pause after clicking stop button
 function countTime() {
   let seconds = (minutes = hours = 0);
   return () => {
