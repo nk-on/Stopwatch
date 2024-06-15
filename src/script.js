@@ -36,6 +36,10 @@ function countTime() {
 }
 function startStopWatch() {
   const countTimeFun = countTime();
-  setInterval(countTimeFun, 1000);
+  const interval = setInterval(countTimeFun, 1000);
+  function pauseStopWatch() {
+    clearInterval(interval);
+  }
+  stopButton.addEventListener('click', pauseStopWatch);
 }
 startButton.addEventListener('click', startStopWatch);
