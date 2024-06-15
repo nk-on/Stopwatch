@@ -30,18 +30,21 @@ function countTime() {
       : (hoursElement.textContent = `${hours}`);
   };
 }
-const countTimeFun = countTime();
+let countTimeFun = countTime();
+let interval;
+function pauseStopWatch() {
+  clearInterval(interval);
+}
 function startStopWatch() {
-  const interval = setInterval(countTimeFun, 1000);
-  function pauseStopWatch() {
-    clearInterval(interval);
-  }
-  stopButton.addEventListener('click', pauseStopWatch);
+  interval = setInterval(countTimeFun, 1000);
 }
 function resetStopWatch() {
   hoursElement.textContent = '00';
   minutesElement.textContent = ':00';
   secondsElement.textContent = ':00';
+  pauseStopWatch();
+  countTimeFun = countTime();
 }
 startButton.addEventListener('click', startStopWatch);
+stopButton.addEventListener('click', pauseStopWatch);
 restButton.addEventListener('click', resetStopWatch);
