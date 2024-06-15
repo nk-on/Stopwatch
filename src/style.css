@@ -3,6 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --orange: #ffa600;
+  --gray: #f3f3f3;
+  --white: #fff;
+}
 body {
   min-height: 100vh;
   display: flex;
@@ -15,9 +20,9 @@ body {
   justify-content: space-between;
   flex-direction: column;
 }
-.numbers-container{
+.numbers-container {
   display: flex;
 }
-.buttons{
+.buttons {
   display: flex;
 }
