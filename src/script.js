@@ -3,6 +3,7 @@ const minutesElement = document.querySelector('[data-minutes]');
 const secondsElement = document.querySelector('[data-seconds]');
 const startButton = document.querySelector('[data-start]');
 const stopButton = document.querySelector('[data-stop]');
+const restButton = document.querySelector('[data-reset]');
 function countTime() {
   let seconds = (minutes = hours = 0);
   return () => {
@@ -37,4 +38,10 @@ function startStopWatch() {
   }
   stopButton.addEventListener('click', pauseStopWatch);
 }
+function resetStopWatch() {
+  hoursElement.textContent = '00';
+  minutesElement.textContent = ':00';
+  secondsElement.textContent = ':00';
+}
 startButton.addEventListener('click', startStopWatch);
+restButton.addEventListener('click', resetStopWatch);
