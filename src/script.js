@@ -34,8 +34,8 @@ function countTime() {
       : (hoursElement.textContent = `${hours}`);
   };
 }
+const countTimeFun = countTime();
 function startStopWatch() {
-  const countTimeFun = countTime();
   const interval = setInterval(countTimeFun, 1000);
   function pauseStopWatch() {
     clearInterval(interval);
